@@ -2,23 +2,21 @@ package aplicacao;
 
 import java.util.Date;
 
-import modelEntidade.Departamento;
-import modelEntidade.Vendedor;
+import modelDao.DaoFactory;
+import modelDao.SellerDao;
+import modelEntidade.Department;
+import modelEntidade.Seller;
 
 public class Programa {
 
     public static void main(String[] args) {
-        
-        Departamento obj = new Departamento(1, "Livros");
+     
+        SellerDao sellerDao = DaoFactory.createSellerDao();
 
-        Vendedor vendedor = new Vendedor(21, "Bob", "bob@gmail.com", 2200, new Date(), obj);
+        Seller seller = sellerDao.findById(3);
 
-        System.out.println(vendedor);
+        System.out.println(seller);
 
-        System.out.println("Alteração funcionando");
-
-
-        
 
     }
 

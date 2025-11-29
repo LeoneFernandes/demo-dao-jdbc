@@ -3,28 +3,28 @@ package modelEntidade;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Vendedor implements Serializable {
+public class Seller implements Serializable {
 
     private Integer id;
     private String nome;
     private String email;
-    private double salarioBase;
-    private Date aniversario;
+    private double baseSalary;
+    private Date birthDate;
 
-    private Departamento departamento;
+    private Department department;
 
-    public Vendedor(){
+    public Seller(){
 
     }
 
-    public Vendedor(Integer id, String nome, String email, double salarioBase, Date aniversario,
-            Departamento departamento) {
+    public Seller(Integer id, String nome, String email, double baseSalary, Date birthDate,
+            Department department) {
         this.id = id;
         this.nome = nome;
         this.email = email;
-        this.salarioBase = salarioBase;
-        this.aniversario = aniversario;
-        this.departamento = departamento;
+        this.baseSalary = baseSalary;
+        this.birthDate = birthDate;
+        this.department = department;
     }
 
     public Integer getId() {
@@ -51,28 +51,28 @@ public class Vendedor implements Serializable {
         this.email = email;
     }
 
-    public double getSalarioBase() {
-        return salarioBase;
+    public double getbaseSalary() {
+        return baseSalary;
     }
 
-    public void setSalarioBase(double salarioBase) {
-        this.salarioBase = salarioBase;
+    public void setbaseSalary(double baseSalary) {
+        this.baseSalary = baseSalary;
     }
 
-    public Date getAniversario() {
-        return aniversario;
+    public Date getBiDate() {
+        return birthDate;
     }
 
-    public void setAniversario(Date aniversario) {
-        this.aniversario = aniversario;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
-    public Departamento getDepartamento() {
-        return departamento;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setDepartamento(Departamento departamento) {
-        this.departamento = departamento;
+    public void setDepartment(Department department) {
+        this.department= department;
     }
 
     @Override
@@ -91,7 +91,7 @@ public class Vendedor implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Vendedor other = (Vendedor) obj;
+        Seller other = (Seller) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -102,8 +102,8 @@ public class Vendedor implements Serializable {
 
     @Override
     public String toString() {
-        return "Vendedor [id=" + id + ", nome=" + nome + ", email=" + email + ", salarioBase=" + salarioBase
-                + ", aniversario=" + aniversario + ", departamento=" + departamento + "]";
+        return "Vendedor [id=" + id + ", nome=" + nome + ", email=" + email + ", salarioBase=" + baseSalary
+                + ", aniversario=" + birthDate + ", departamento=" + department + "]";
     }
 
     

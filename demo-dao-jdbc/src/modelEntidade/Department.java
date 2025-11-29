@@ -2,15 +2,20 @@ package modelEntidade;
 
 import java.io.Serializable;
 
-public class Departamento implements Serializable{
+public class Department implements Serializable{
 
     private Integer id;
     private String name;
 
     
-    public Departamento(Integer id, String name) {
+    public Department(Integer id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+
+    public Department() {
+        //TODO Auto-generated constructor stub
     }
 
 
@@ -53,7 +58,7 @@ public class Departamento implements Serializable{
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Departamento other = (Departamento) obj;
+        Department other = (Department) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
