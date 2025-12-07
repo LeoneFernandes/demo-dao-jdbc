@@ -6,7 +6,7 @@ import modelEntidade.Department;
 
 public interface DepartmentDao {
 
-    void inserir(Department obj); //responsável por inserir o banco de dados
+    void insert(Department obj); //responsável por inserir o banco de dados
     void atualizar(Department obj);
     void deleteById(Integer id);
     Department findById(Integer id); //responsável por pegar esse Id e consultar no banco de dados o objeto com esse Id, se existir vai retornar, senao vai retornar nulo;

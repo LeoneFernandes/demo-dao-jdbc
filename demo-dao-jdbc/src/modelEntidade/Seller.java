@@ -6,7 +6,7 @@ import java.util.Date;
 public class Seller implements Serializable {
 
     private Integer id;
-    private String nome;
+    private String name;
     private String email;
     private double baseSalary;
     private Date birthDate;
@@ -17,10 +17,10 @@ public class Seller implements Serializable {
 
     }
 
-    public Seller(Integer id, String nome, String email, double baseSalary, Date birthDate,
+    public Seller(Integer id, String name, String email, double baseSalary, Date birthDate,
             Department department) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.email = email;
         this.baseSalary = baseSalary;
         this.birthDate = birthDate;
@@ -35,12 +35,12 @@ public class Seller implements Serializable {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -59,7 +59,7 @@ public class Seller implements Serializable {
         this.baseSalary = baseSalary;
     }
 
-    public Date getBiDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
@@ -102,7 +102,7 @@ public class Seller implements Serializable {
 
     @Override
     public String toString() {
-        return "Vendedor [id=" + id + ", nome=" + nome + ", email=" + email + ", salarioBase=" + baseSalary
+        return "Vendedor [id=" + id + ", name=" + name + ", email=" + email + ", salarioBase=" + baseSalary
                 + ", aniversario=" + birthDate + ", departamento=" + department + "]";
     }
 
