@@ -40,6 +40,15 @@ public class Programa {
 
 
 
+        System.out.println("\n===TEST 5: seller update ===");
+        seller = sellerDao.findById(1);
+        seller.setName("Martha Wheyne");
+        sellerDao.update(seller);
+        System.out.println("Atualizacao completa!");
+
+
+
+
 
 
     }
